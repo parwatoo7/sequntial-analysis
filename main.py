@@ -35,22 +35,17 @@ class SA:
         _ = self
         n = _.gn(v)
         if n == None:
-            # attention - 1
-            #_.l.append({"i":len(_.l),"v": v,"t": []})
             _.an(v)
             _.p = _.c
             _.c = _.gn(v)
             _.at(_.p,_.c["i"])
         else:
-            # attention + 1
             _.p = _.c
             _.c = n
             t = _.gt(_.p, _.c["i"])
             if t == None:
-                # attention - 2
                 _.at(_.p,_.c["i"])
             elif t != None:
-                # attention + 2
                 _.iw(t)
                 _.ns(t, _.p["t"])
         

@@ -52,4 +52,48 @@ class SA:
         return _.p,_.c
         
         
+sa = SA()
 
+data = "abcabcabc"
+
+for i in data:
+    sa.IN(i)
+
+print(sa.l)
+
+# output 
+"""
+[
+    {
+        'i': 0, 
+        'v': '', 
+        't': [
+            {'i': 1, 'w': 1}
+        ]
+    }, 
+    {
+        'i': 1, 
+        'v': 'a', # static value
+        't': [
+            {
+                'i': 2, # index of a correlated value
+                'w': 3 # the weight, representing the number of times correlated
+            } # [a,b]
+        ]
+    }, 
+    {
+        'i': 2,
+        'v': 'b', 
+        't': [
+            {'i': 3, 'w': 3} # [b,c]
+        ]
+    }, 
+    {
+        'i': 3, 
+        'v': 'c', 
+        't': [
+            {'i': 1, 'w': 2}
+        ]
+    }
+]
+"""

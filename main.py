@@ -78,7 +78,7 @@ print(sa.l)
             {
                 'i': 2, # index of a correlated value
                 'w': 3 # the weight, representing the number of times correlated
-            } # [a,b]
+            } # [a,b] happend 3 times
         ]
     }, 
     {
